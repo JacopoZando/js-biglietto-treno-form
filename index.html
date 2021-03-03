@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tren&yicy;talia &percnt;&plus;</title>
+  </head>
+  <body>
+    <script>
+      //variabili
+      var totKm = prompt("quanti km vorresti percorrere?");
+      var età = prompt("Inserisci la tua età");
+      var costoPerKm = 0.21;
+      var costoBiglietto = (età * costoPerKm);
+
+      console.log("la tratta richiesta è di " + totKm + "Km");
+      console.log("il costo previsto è di " + costoBiglietto + "€");
+      
+      //if-else
+      if (età > 65) {
+        var costoBigliettoScontoOver65 = costoBiglietto - (costoBiglietto * 40 / 100);
+        console.log("il costo finale è di " + costoBigliettoScontoOver65 + "€ con uno sconto di " + (costoBiglietto - costoBigliettoScontoOver65).toFixed(2) + "€");
+      }
+
+      else if (età < 18) {
+        var costoBigliettoScontoUnder18 = costoBiglietto - (costoBiglietto * 20 / 100);
+        console.log("il costo finale è di " + costoBigliettoScontoUnder18 + "€ con uno sconto di " + (costoBiglietto - costoBigliettoScontoUnder18).toFixed(2) + "€");
+      }
+
+      else {
+        console.log("non sono previsti sconti!");
+      }
+      console.log("BUON VIAGGIO!!")
+    </script>
+  </body>
+</html>
